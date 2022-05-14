@@ -1,0 +1,250 @@
+@mixin center {
+  align-content: center;
+  display: flex;
+  justify-content: center;
+}
+@mixin blackwhite {
+  width: $width;
+  height: $height;
+  display: inline-block; 
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  max-width: 80px;
+}
+
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+  
+
+}
+
+body .container{
+  overflow: auto;
+  margin: 0; 
+  height: 100%;
+
+}
+
+.container{
+  @include center();
+  overflow: hidden;
+  position: relative;
+  background-image: url(https://media.istockphoto.com/photos/illustration-of-a-wood-grain-background-picture-id1291142868?k=20&m=1291142868&s=612x612&w=0&h=cBJRh22CeaB2J_AtQkuEiuWl4mes7kfVQdIgGOSSmqM=);
+
+    .title{
+        justify-content: center;
+        font-family: 'Permanent Marker', cursive;
+        margin: 30px auto;
+        color: palevioletred;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        letter-spacing: 3px;
+        font-size: 50px;
+
+    }
+}
+
+.chessboard{
+    width: 640px;
+    height: 640px;
+    border: 25px solid gray;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 640px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 100px;
+    border: 25px solid thistle;
+    border-radius: 20px;
+    position: absolute;
+
+
+    .black{
+      @include blackwhite();
+      background-image: url(https://i.pinimg.com/originals/9d/ef/63/9def639dec911f46220861c75da954a2.jpg);
+    }
+
+    .white{
+      @include blackwhite();
+      background-color: #fff;
+    }
+
+    .piece{
+      background-color: transparent;
+      font-size: 50px;
+    }
+
+}
+    
+//Animation
+
+#move1 {
+    position: relative;
+    animation-name: frame1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes frame1 {
+    0% {
+      left: 0px;
+      top: 0px;
+    }
+    100% {
+      left: 0px;
+      top: -80px;
+    }
+  }
+  
+
+  #move2 {
+    position: relative;
+    animation-name: frame2;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes frame2 {
+    0% {
+      left: 0px;
+      top: 0px;
+    }
+    100% {
+      left: 0px;
+      top: 80px;
+    }
+  }
+
+#move3 {
+    position: relative;
+    animation-name: frame1;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes frame3 {
+    0% {
+      left: 0px;
+      top: 0px;
+    }
+    100% {
+      left: 0px;
+      top: -80px;
+    }
+}
+
+  @media screen and (max-width: 700px) {
+    .title{
+      font-size: 25px !important;
+    }
+    .chessboard {
+      width: 320px;
+      height: 320px;
+      position: absolute;
+      border-radius: 10px;
+      border: 12.5px solid thistle;
+    }
+    
+    .chessboard .black {
+      width: 40px;
+      height: 40px;
+      max-width: 40px;
+    }
+    
+    .chessboard .white {
+      width: 40px;
+      height: 40px;
+      max-width: 40px;
+    }
+    
+    .chessboard .piece {
+      background-color: transparent;
+      font-size: 25px;
+    }
+//Animation 700px
+
+#move1 {
+  position: relative;
+  animation-name: frame1;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes frame1 {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: -40px;
+  }
+}
+
+
+#move2 {
+  position: relative;
+  animation-name: frame2;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes frame2 {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: 40px;
+  }
+}
+
+#move3 {
+  position: relative;
+  animation-name: frame1;
+  animation-duration: 2s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes frame1 {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: -40px;
+  }
+}
+
+#move4 {
+  position: relative;
+  animation-name: frame3;
+  animation-duration: 3s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+@keyframes frame3 {
+  0% {
+    left: 0px;
+    top: 0px;
+
+  }
+  100% {
+    left: -80px;
+    top: 80px;
+  }
+}
+    
+}

@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body .container {
+  overflow: auto;
+  margin: 0;
+  height: 100%;
+}
+
+.container {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: auto;
+  position: relative;
+  background-image: url(https://media.istockphoto.com/photos/illustration-of-a-wood-grain-background-picture-id1291142868?k=20&m=1291142868&s=612x612&w=0&h=cBJRh22CeaB2J_AtQkuEiuWl4mes7kfVQdIgGOSSmqM=);
+}
+
+.container .title {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Permanent Marker', cursive;
+  margin: 30px auto;
+  color: palevioletred;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  letter-spacing: 3px;
+  font-size: 50px;
+}
+
+.chessboard {
+  width: 640px;
+  height: 640px;
+  border: 25px solid gray;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 640px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 100px;
+  border: 25px solid thistle;
+  border-radius: 20px;
+  position: absolute;
+}
+
+.chessboard .black {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 80px;
+  background-image: url(https://i.pinimg.com/originals/9d/ef/63/9def639dec911f46220861c75da954a2.jpg);
+}
+
+.chessboard .white {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 80px;
+  background-color: #fff;
+}
+
+.chessboard .piece {
+  background-color: transparent;
+  font-size: 50px;
+}
+
+#move1 {
+  position: relative;
+  -webkit-animation-name: frame1;
+          animation-name: frame1;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes frame1 {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: -80px;
+  }
+}
+
+@keyframes frame1 {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: -80px;
+  }
+}
+
+#move2 {
+  position: relative;
+  -webkit-animation-name: frame2;
+          animation-name: frame2;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes frame2 {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: 80px;
+  }
+}
+
+@keyframes frame2 {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: 80px;
+  }
+}
+
+#move3 {
+  position: relative;
+  -webkit-animation-name: frame1;
+          animation-name: frame1;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes frame3 {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: -80px;
+  }
+}
+
+@keyframes frame3 {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: -80px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+    font-size: 25px !important;
+  }
+  .chessboard {
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    border-radius: 10px;
+    border: 12.5px solid thistle;
+  }
+  .chessboard .black {
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+  }
+  .chessboard .white {
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+  }
+  .chessboard .piece {
+    background-color: transparent;
+    font-size: 25px;
+  }
+  #move1 {
+    position: relative;
+    -webkit-animation-name: frame1;
+            animation-name: frame1;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes frame1 {
+    0% {
+      left: 0px;
+      top: 0px;
+    }
+    100% {
+      left: 0px;
+      top: -40px;
+    }
+  }
+  @keyframes frame1 {
+    0% {
+      left: 0px;
+      top: 0px;
+    }
+    100% {
+      left: 0px;
+      top: -40px;
+    }
+  }
+  #move2 {
+    position: relative;
+    -webkit-animation-name: frame2;
+            animation-name: frame2;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes frame2 {
+    0% {
+      left: 0px;
+      top: 0px;
+    }
+    100% {
+      left: 0px;
+      top: 40px;
+    }
+  }
+  @keyframes frame2 {
+    0% {
+      left: 0px;
+      top: 0px;
+    }
+    100% {
+      left: 0px;
+      top: 40px;
+    }
+  }
+  #move3 {
+    position: relative;
+    -webkit-animation-name: frame1;
+            animation-name: frame1;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @keyframes frame1 {
+    0% {
+      left: 0px;
+      top: 0px;
+    }
+    100% {
+      left: 0px;
+      top: -40px;
+    }
+  }
+  #move4 {
+    position: relative;
+    -webkit-animation-name: frame3;
+            animation-name: frame3;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes frame3 {
+    0% {
+      left: 0px;
+      top: 0px;
+    }
+    100% {
+      left: -80px;
+      top: 80px;
+    }
+  }
+  @keyframes frame3 {
+    0% {
+      left: 0px;
+      top: 0px;
+    }
+    100% {
+      left: -80px;
+      top: 80px;
+    }
+  }
+}
+/*# sourceMappingURL=Chessboard.css.map */
